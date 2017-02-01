@@ -1,4 +1,4 @@
-# js_web
+# js_web - Just Shred Website
 
 > The website of the famous Just Shred group
 
