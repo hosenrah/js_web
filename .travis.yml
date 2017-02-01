@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+- node
+before_script:
+  - npm install -g bower
+  - bower install
+env:
+  global: 
+addons:
+  ssh_known_hosts: s493274694.online.de
+before_install:
+- bash _scripts/install.sh
+after_success:
+- bash _scripts/deploy.sh
