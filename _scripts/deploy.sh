@@ -1,8 +1,14 @@
 #!/bin/bash
-set -x
-if [ $TRAVIS_BRANCH == 'master' ] ; then
-    scp -r dist/static u74789873@s493274694.online.de:js_web/
-    echo "Deployed to Webserver."
-else
-    echo "Not deploying, since this branch isn't master."
-fi
+cd `dirname $0`
+
+# Extract the package
+tar -xzf package.tgz
+rm package.tgz
+
+# Copy any file we want to keep from build to build
+cp www/app/config/parameters.yml build/app/config/parameters.yml
+
+# Swap it all around, keeping the previous version aside in case something goes wrong
+rm -rf www_old
+mv www www_old
+mv build www

@@ -2,16 +2,27 @@ language: node_js
 node_js:
 - node
 before_script:
-  - npm install -g bower
-  - bower install
+- npm install -g bower
+- bower install
 env:
   global:
+  - secure: mINDAcYaNRBHaS+/TshZUrJxFtCPzfLLwv4F+twegEfocZUme9h1SSeIWhUdKOIrdxHUMyjugUF/2mIbCB5FKByzFZ0QihBFTW5UZyOMVt/hvy+QM1rmkXhMr/LRVHV6q1J+QdjXL/ljYEbp+b3P06AUTP6izzzPFB66zSV7cdwP56BTpAIwgiNo90Z/5ktwHHzRuyBOQmRHPHfSX0W7VH5ApmHMVcnpocs31gCalxivPoDf9MgaiSk1YlJ2Ctd5bm6NatVV/zv57douaH/+R/knFvfUFVRcQnk5EiKeysYA/9kg+9CsJeRywBkLr4ZbsvcQhNNQ+sk/118s/wcJrz1cCRIs8pvUrLMpsrpkRxdCtZVp01IrQhjiu/b1pPAzOj6IJ97t1sB6O0btIphMD0cd0IpP4uFCSYtL8U3a9eS7bfds4T0hQWVy1l6mTWr2oAHPBWqVE5/zfahAsXe7PqipsHkLt6wu9IhcLV0LW2L+Iz0tn5ISm8bMkhasvxITZxaWqYPlihmYokNltEVnG2/JAiKqi4kBPDOoi4vB0jjtCB8z7z+QLAeeRvJSGwmERbwWgvF9CRg/gl9jjjTJlFD8t2sH9QFZ/213747CEg3pJqQpCqLI0YGoa7LdshXCI7Z6/D/nIw6x+Xd1Pcv5abJMI1CX9AOAqZsLL1L2biQ=
+  - secure: CFTclpke8lDPt1URg7G/W7pobPOzGZuAurfXqUoEcSPxZzxr4byfzULcKIeFbrqmhKZ5T5XnllQKTm2VnBDj1C+K+3Rlx5S30RBZTnUFTUOnA4gtNfIrp8q1/tU8siax/km2X2lhuEjO1P1nsiOf310d9JQypAqaNrv4bgJc6HTj3JBYDQk9IMj4JpAZrnTLimVg9BI+AAuSWubrt6rC3FOX/V/I/hirXpFIN06pGZugU1QYI4KhsGFrYCijmhLNxbXcs4tM0mS4FXxfqfaldBwIXfJEj+ol4kB4I442TsdaRMnKbHuflorfvIebeS1DuPbLml9BSXWNVUzraWEh/TayubhkzWGAcJUpA6JDAmofWqvOPUjFTQV1P1xEVPYxpRSuG2+wvPX5pQmRBRrjf4PRWPeXtWFE3mQu44I7EzFFmY4nSHk4FPL1DDbUOdTkiKj+DEbqra1VhWucHn82H6Yn17jY/hKl7KRZ/1e6nZNC6V3wOQpO4I62d/yh2RSawUeTAa9Idmc3y7UlKu785TAs0zwBhKgcLiN77DDekphPSAXXoAiC5PMfIVi04q2ZkeR70wx9V+HODyM0RcEw+NsRsJ2PaNd9HMU17DfYgCqR2or8js4TM4S9u91PevB/v3YDohivAD1fixXkvtKR3CvPrXpgWE+KPc4G45B+f0s=
+  - secure: mdnGiSpPjQXOOqfjNZzWugIHl+GVCDuLZRuyW+BVkGDZqZINCQUpYYGflvHRku6Uk72fL7n5p5G4bXm+ZDYAuzpA1aDJrbys1A4Yzql2hFLkzzx0JJqcvaKBC7yRlnk3Ve3WdU/nEFkXQ5vtedK7Dt2Vw80+2KFcfYc3TAGI1r0PI8I24wBgTJG/aI2AdhHC4V0m1V6BIS93ZX53i5Ov7f46LfWXZShhu/i+nanIDkxzK5pj0bFejT4dGG5FQ5DuxiS3PYk/81Xb15lx0j79yaRwHKbw40xEdVdHlHuzkOM6MJNILZsgl3vix+PxfTFo+0hPGm1ousC4MmI5x6uAPYzZx75HAXiTRAkYPvAJ7LYE1p5BpmGOXfIryuK948M+93s/9uAskYp31o+C6xHoXXFvSwUcTv5xu3qxUjvuj/3oJs8fzpnFSooT+1cpL7yJ4JPQXquTqtHE24t24TWhtFepikp0uMyhOL2lyiC4Al0cnhtW4lx8Ww6UoLmKotYEwK+48omecaDK42otIDZyZ854/WBXBBpNwc36qIxCTM3/PAsVgdC0CLEOvOrNjP28iSJ7Yzn5aoFYtVL2TXXkOABb0rkCXM30yS6xwsyfirjBPSg3m9YEbJBmg7pDmlYzIRpbyTGuXLyFpRV7ri4qk77XthkaGj3D8x7KLhXvuPw=
+  - secure: gIpa3YQPKGdxamrJ8wSvyr3rTeaYJUkXqhRqCyDEnCafdcN6IxV3TuHh47p52h3jo+WaGPQdJOpumh1G0fr05Kkx6218+HTX74QoVLp6T92FH0s0z6x8gzT9ItipNUvWkJAKqTvXP4gRsgcpLU39IGbCQ5/wZBeJ1+qZ0LhMEUQB4Fhiphzk4rzUK3Pe85e6am7Zm/e45ajpr1wT97oWIoeBFydZVI/UFm884Kcdd0eDK15u908HKDczzrZvUGSUKn7uBYFdCF7/7EP+rO18fXA4eLpQDOi7NZdvZUDt2jnWmOH7U2afTN4aowrc2l7iau8Ku8S44eQFqWZ5v/KZ6QlYw7FwOne3j6wbBLUm1E8ppQqdNHvcumBdVTf0HMp0U802SrDIeBaFBKPZGWT3l6gMDQ4C/WsbbfLE31aayYebGVmpR3AaDqu/9Ub2vNyUutVse4dqxh/qKLgk5asZvGCZrJLYeh+pRj+b+EcIP36fdyYsMpu9Xz2hlr8Wco9kBD8xbbdMpdv1cMgdv6zDledGR7gT+NAL79DDLZozJ9MBV5XPQUgBYMt5It9zWGBaDJ4YY1gbfhxZ4dLViWocAuck61G90gTFmobJOoXE3SfxrMASHWiDpqO3JD2isbDzFxe0Mc2aplgJrgmIVYOwncCPYXOkmVHmcji1WnxIa5M=
 addons:
   ssh_known_hosts: s493274694.online.de
+  apt:
+    packages:
+    - sshpass
 before_deploy:
-  - openssl aes-256-cbc -K $encrypted_39769eb20937_key -iv $encrypted_39769eb20937_iv -in deploy_rsa.enc -out deploy_rsa -d
-  - eval "$(ssh-agent -s)"
-  - chmod 600 /tmp/deploy_rsa
-  - ssh-add /tmp/deploy_rsa
+- openssl aes-256-cbc -K $encrypted_39769eb20937_key -iv $encrypted_39769eb20937_iv
+  -in deploy_rsa.enc -out deploy_rsa -d
+- eval "$(ssh-agent -s)"
+- chmod 600 /tmp/deploy_rsa
+- ssh-add /tmp/deploy_rsa
 after_success:
-- bash _scripts/deploy.sh
+- tar -czf package.tgz dist/static
+- export SSHPASS=$SSH_PASS
+- sshpass -e scp package.tgz $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH
+- sshpass -e ssh $DEPLOY_USER@$DEPLOY_HOST $DEPLOY_PATH/deploy.sh
