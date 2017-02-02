@@ -22,8 +22,7 @@ before_deploy:
 - chmod 600 /tmp/deploy_rsa
 - ssh-add /tmp/deploy_rsa
 after_success:
-- ls -al
-- tar -czf package.tgz js_web/dist/static
+- tar -czf package.tgz dist
 - export SSHPASS=$SSH_PASS
 - sshpass -e scp package.tgz $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH
 - sshpass -e ssh $DEPLOY_USER@$DEPLOY_HOST "tar -xzf $DEPLOY_PATH/package.tgz ."
