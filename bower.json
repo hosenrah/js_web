@@ -1,5 +1,5 @@
 {
-  "name": "js_website",
+  "name": "js_web",
   "description": "This is the website of the famous Just Shred crew",
   "main": "index.js",
   "authors": [
@@ -7,7 +7,7 @@
   ],
   "license": "ISC",
   "keywords": [
-    "js_website"
+    "js_web"
   ],
   "homepage": "https://github.com/hosenrah/js_website",
   "ignore": [

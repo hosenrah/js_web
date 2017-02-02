@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/hosenrah/js_web.svg?branch=master)](https://travis-ci.org/hosenrah/js_web)
+
 # js_web - Just Shred Website
 
 > The website of the famous Just Shred group
