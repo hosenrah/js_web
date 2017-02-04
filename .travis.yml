@@ -25,4 +25,4 @@ after_success:
 - tar -czvf package.tgz -C dist .
 - export SSHPASS=$SSH_PASS
 - sshpass -e scp package.tgz $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH
-- sshpass -e ssh $DEPLOY_USER@$DEPLOY_HOST "tar -xzvf $DEPLOY_PATH/package.tgz -C $DEPLOY_PATH"
+- sshpass -e ssh $DEPLOY_USER@$DEPLOY_HOST "tar -xzvf $DEPLOY_PATH/package.tgz -C $DEPLOY_PATH && rm package.tgz"
