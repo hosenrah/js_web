@@ -14,7 +14,7 @@
     </div>
     <div id="group3" class="parallax__group">
       <div class="parallax__layer parallax__layer--fore">
-        <div class="title">Foreground Layer</div>
+        <videos></videos>
       </div>
       <div class="parallax__layer parallax__layer--base">
         <div class="title">Base Layer</div>
@@ -58,12 +58,14 @@
 <script>
 import VideoBG from './VideoBG'
 import Sponsors from './Sponsors'
+import Videos from './Videos'
 
 export default {
   name: 'parallax',
   components: {
     VideoBG,
-    Sponsors
+    Sponsors,
+    Videos
   },
   data () {
     return {
@@ -89,7 +91,11 @@ export default {
     perspective: 300px;
     -webkit-perspective-origin-x: 100%;
     perspective-origin-x: 100%;
+
+
   }
+
+
 
   .parallax__group {
     position: relative;
@@ -168,7 +174,7 @@ export default {
   }
   #group2 .parallax__layer--back {
     background: rgb(123,210,102);
-    background-image: url(../assets/parallax/auto.jpg);
+    background-image: url(../assets/parallax/bomb.jpg);
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -178,7 +184,6 @@ export default {
   }
   #group3 .parallax__layer--base {
     background: rgb(153,216,101);
-    background-image: url(../assets/parallax/bomb.jpg);
     background-repeat: no-repeat;
     background-size: cover;
   }

@@ -38,7 +38,7 @@
 
 <script>
 export default {
-  name: 'riders',
+  name: 'sponsors',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
