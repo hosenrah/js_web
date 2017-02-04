@@ -14,10 +14,9 @@
     </div>
     <div id="group3" class="parallax__group">
       <div class="parallax__layer parallax__layer--fore">
-        <videos></videos>
+        <instagram></instagram>
       </div>
       <div class="parallax__layer parallax__layer--base">
-        <div class="title">Base Layer</div>
       </div>
     </div>
     <div id="group4" class="parallax__group">
@@ -36,7 +35,7 @@
         <div class="title">Foreground Layer</div>
       </div>
       <div class="parallax__layer parallax__layer--base">
-        <div class="title">Base Layer</div>
+        <videos></videos>
       </div>
     </div>
     <div id="group6" class="parallax__group">
@@ -59,13 +58,15 @@
 import VideoBG from './VideoBG'
 import Sponsors from './Sponsors'
 import Videos from './Videos'
+import Instagram from './Instagram'
 
 export default {
   name: 'parallax',
   components: {
     VideoBG,
     Sponsors,
-    Videos
+    Videos,
+    Instagram
   },
   data () {
     return {

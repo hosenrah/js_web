@@ -18,7 +18,10 @@ export default {
     }
   },
   mounted: function () {
-    this.$http.get('https://api.vimeo.com/me/videos').then(response => {
+    this.$http.get(
+      'https://api.vimeo.com/me/videos',
+      {headers: {'Authorization': 'bearer 1bb5838a1c16bdab1e8eac3add1b6f2a'}})
+    .then(response => {
       this.vimeoVideos = response.body.data
     }, response => {
     })
