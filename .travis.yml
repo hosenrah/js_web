@@ -22,7 +22,8 @@ before_deploy:
 - chmod 600 /tmp/deploy_rsa
 - ssh-add /tmp/deploy_rsa
 after_success:
+- npm run build
 - tar -czvf package.tgz -C dist .
 - export SSHPASS=$SSH_PASS
 - sshpass -e scp package.tgz $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH
-- sshpass -e ssh $DEPLOY_USER@$DEPLOY_HOST "tar -xzvf $DEPLOY_PATH/package.tgz -C $DEPLOY_PATH && rm package.tgz"
+- sshpass -e ssh $DEPLOY_USER@$DEPLOY_HOST "tar -xzvf $DEPLOY_PATH/package.tgz -C $DEPLOY_PATH && rm $DEPLOY_PATH/package.tgz"
