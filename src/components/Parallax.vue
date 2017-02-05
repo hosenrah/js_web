@@ -2,7 +2,6 @@
   <div class="parallax">
     <div id="group1" class="parallax__group">
       <div class="parallax__layer parallax__layer--base">
-        <mainMenu></mainMenu>
         <videoBG></videoBG>
       </div>
     </div>

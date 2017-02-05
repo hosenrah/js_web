@@ -1,6 +1,6 @@
 <template>
   <div class="menu-container">
-    <div class="js-logo"></div>
+    <a class="js-logo" href="#group1"></a>
     <div class="menu-items">
       <div class="item">
         <a href="#group2">Sponsors</a>
@@ -38,13 +38,14 @@ export default {
     position: absolute;
     content: "";
     width: 100%;
-    height: 3em;
+    height: 4em;
     background-color: white;
+    z-index: 1000;
   }
   .js-logo {
     position: absolute;
-    left: 0.5em;
-    width: 5em;
+    left: 1em;
+    width: 7em;
     height: 100%;
     background-image: url(../assets/js_logo/js_logo_white_nav.png);
     background-size: 100%;
@@ -60,7 +61,7 @@ export default {
     justify-content: flex-end;
   }
   .item {
-    margin: 0.7em 0.5em;
+    margin: 1.1em 0.5em;
     a {
       color: black;
       text-transform: uppercase;

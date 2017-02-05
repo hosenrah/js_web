@@ -1,16 +1,19 @@
 <template>
   <div id="app">
+    <mainMenu></mainMenu>
     <parallax></parallax>
   </div>
 </template>
 
 <script>
 import Parallax from './components/Parallax'
+import MainMenu from './components/MainMenu'
 
 export default {
   name: 'app',
   components: {
-    Parallax
+    Parallax,
+    MainMenu
   }
 }
 </script>
@@ -31,6 +34,7 @@ h1 {
   text-align: center;
   border: 0.1em solid black;
   margin: 0.5em auto;
+  margin-top: 1.5em;
 }
 
 </style>

@@ -46,11 +46,15 @@ export default {
     justify-content: space-around;
   }
   .instaPost {
-      width: 20rem;
-      height: 15rem;
-      margin-left: 1.66%;
-      margin-right: 1.66%;
-      margin-bottom: 8.3%;
+    width: 20rem;
+    height: 16rem;
+    margin-right: 1em;
+    margin-bottom: 2em;
+    overflow: hidden;
+
+    & .square {
+      background-size: cover;
+    }
   }
 
 .square {
