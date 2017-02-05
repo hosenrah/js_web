@@ -47,7 +47,7 @@ export default {
   }
   .instaPost {
       width: 20rem;
-      height: 20rem;
+      height: 15rem;
       margin-left: 1.66%;
       margin-right: 1.66%;
       margin-bottom: 8.3%;

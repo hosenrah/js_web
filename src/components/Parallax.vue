@@ -14,41 +14,34 @@
     </div>
     <div id="group3" class="parallax__group">
       <div class="parallax__layer parallax__layer--fore">
-        <instagram></instagram>
+        <team></team>
       </div>
       <div class="parallax__layer parallax__layer--base">
       </div>
     </div>
     <div id="group4" class="parallax__group">
       <div class="parallax__layer parallax__layer--base">
-        <div class="title">Base Layer</div>
+        <instagram></instagram>
       </div>
       <div class="parallax__layer parallax__layer--back">
-        <div class="title">Background Layer</div>
-      </div>
-      <div class="parallax__layer parallax__layer--deep">
-        <div class="title">Deep Background Layer</div>
       </div>
     </div>
     <div id="group5" class="parallax__group">
       <div class="parallax__layer parallax__layer--fore">
-        <div class="title">Foreground Layer</div>
+        <videos></videos>
       </div>
       <div class="parallax__layer parallax__layer--base">
-        <videos></videos>
       </div>
     </div>
     <div id="group6" class="parallax__group">
       <div class="parallax__layer parallax__layer--back">
-        <div class="title">Background Layer</div>
       </div>
       <div class="parallax__layer parallax__layer--base">
-        <div class="title">Base Layer</div>
+        <tutorials></tutorials>
       </div>
     </div>
     <div id="group7" class="parallax__group">
       <div class="parallax__layer parallax__layer--base">
-        <div class="title">Base Layer</div>
       </div>
     </div>
   </div>
@@ -57,16 +50,20 @@
 <script>
 import VideoBG from './VideoBG'
 import Sponsors from './Sponsors'
+import Team from './Team'
 import Videos from './Videos'
 import Instagram from './Instagram'
+import Tutorials from './Tutorials'
 
 export default {
   name: 'parallax',
   components: {
     VideoBG,
     Sponsors,
+    Team,
     Videos,
-    Instagram
+    Instagram,
+    Tutorials
   },
   data () {
     return {
@@ -92,8 +89,6 @@ export default {
     perspective: 300px;
     -webkit-perspective-origin-x: 100%;
     perspective-origin-x: 100%;
-
-
   }
 
 
@@ -158,8 +153,6 @@ export default {
     transform: translate(-50%, -50%);
   }
 
-
-
   /* style the groups
   --------------------------------------------- */
 
@@ -192,7 +185,7 @@ export default {
   #group4 {
     z-index: 2; /* slide under group 3 and 5 */
   }
-  #group4 .parallax__layer--deep {
+  #group4 .parallax__layer--back {
     background: rgb(184,223,101);
     background-image: url(../assets/parallax/station.jpg);
     background-repeat: no-repeat;
