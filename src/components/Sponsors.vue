@@ -59,6 +59,11 @@ export default {
   .sponsor {
     & img {
       width: 300px;
+      box-sizing: border-box;
+      &:hover {
+        transform: scale(1.1);
+        transition-duration: 140ms;
+      }
     }
   }
 </style>

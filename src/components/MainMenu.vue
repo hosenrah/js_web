@@ -66,6 +66,9 @@ export default {
       color: black;
       text-transform: uppercase;
       text-decoration: none;
+      &:hover {
+        border-bottom: 2px solid black;
+      }
     }
   }
 </style>

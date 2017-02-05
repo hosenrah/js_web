@@ -42,6 +42,9 @@
     </div>
     <div id="group7" class="parallax__group">
       <div class="parallax__layer parallax__layer--base">
+        <div class="social-container">
+          <instagramIcon></instagramIcon>
+        </div>
       </div>
     </div>
   </div>
@@ -55,6 +58,7 @@ import Team from './Team'
 import Videos from './Videos'
 import Instagram from './Instagram'
 import Tutorials from './Tutorials'
+import InstagramIcon from './InstagramIcon'
 
 export default {
   name: 'parallax',
@@ -65,7 +69,8 @@ export default {
     Team,
     Videos,
     Instagram,
-    Tutorials
+    Tutorials,
+    InstagramIcon
   },
   data () {
     return {
@@ -76,7 +81,9 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style>
+
+
 
   /* Parallax base styles, credit goes to
   http://keithclark.co.uk/articles/pure-css-parallax-websites/
@@ -224,4 +231,19 @@ export default {
     background-size: cover;
   }
 
+  .social-container {
+    position: absolute;
+    height: 20%;
+    width: 20%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+  }
 </style>

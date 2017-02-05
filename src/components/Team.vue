@@ -36,8 +36,13 @@ export default {
     align-content: center;
   }
   .member {
+    overflow: hidden;
     & img {
       width: 15em;
+      &:hover {
+        transform: scale(1.1);
+        transition-duration: 140ms;
+      }
     }
   }
 </style>

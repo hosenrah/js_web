@@ -54,6 +54,10 @@ export default {
 
     & .square {
       background-size: cover;
+      &:hover {
+        transform: scale(1.1);
+        transition-duration: 140ms;
+      }
     }
   }
 
