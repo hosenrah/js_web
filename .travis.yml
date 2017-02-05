@@ -1,9 +1,6 @@
 language: node_js
 node_js:
 - node
-before_script:
-- npm install -g bower
-- bower install
 env:
   global:
   - secure: mINDAcYaNRBHaS+/TshZUrJxFtCPzfLLwv4F+twegEfocZUme9h1SSeIWhUdKOIrdxHUMyjugUF/2mIbCB5FKByzFZ0QihBFTW5UZyOMVt/hvy+QM1rmkXhMr/LRVHV6q1J+QdjXL/ljYEbp+b3P06AUTP6izzzPFB66zSV7cdwP56BTpAIwgiNo90Z/5ktwHHzRuyBOQmRHPHfSX0W7VH5ApmHMVcnpocs31gCalxivPoDf9MgaiSk1YlJ2Ctd5bm6NatVV/zv57douaH/+R/knFvfUFVRcQnk5EiKeysYA/9kg+9CsJeRywBkLr4ZbsvcQhNNQ+sk/118s/wcJrz1cCRIs8pvUrLMpsrpkRxdCtZVp01IrQhjiu/b1pPAzOj6IJ97t1sB6O0btIphMD0cd0IpP4uFCSYtL8U3a9eS7bfds4T0hQWVy1l6mTWr2oAHPBWqVE5/zfahAsXe7PqipsHkLt6wu9IhcLV0LW2L+Iz0tn5ISm8bMkhasvxITZxaWqYPlihmYokNltEVnG2/JAiKqi4kBPDOoi4vB0jjtCB8z7z+QLAeeRvJSGwmERbwWgvF9CRg/gl9jjjTJlFD8t2sH9QFZ/213747CEg3pJqQpCqLI0YGoa7LdshXCI7Z6/D/nIw6x+Xd1Pcv5abJMI1CX9AOAqZsLL1L2biQ=
