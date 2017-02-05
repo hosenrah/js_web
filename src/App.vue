@@ -26,7 +26,11 @@ body {
   padding:0;
 }
 h1 {
+  position: relative;
+  width: 8em;
   text-align: center;
+  border: 0.1em solid black;
+  margin: 0.5em auto;
 }
 
 </style>

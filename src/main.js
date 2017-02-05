@@ -3,6 +3,8 @@
 import Vue from 'vue'
 import VueResource from 'vue-resource'
 Vue.use(VueResource)
+var vueSmoothScroll = require('vue-smoothscroll')
+Vue.use(vueSmoothScroll)
 import App from './App'
 
 /* eslint-disable no-new */

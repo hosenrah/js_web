@@ -2,6 +2,7 @@
   <div class="parallax">
     <div id="group1" class="parallax__group">
       <div class="parallax__layer parallax__layer--base">
+        <mainMenu></mainMenu>
         <videoBG></videoBG>
       </div>
     </div>
@@ -49,6 +50,7 @@
 
 <script>
 import VideoBG from './VideoBG'
+import MainMenu from './MainMenu'
 import Sponsors from './Sponsors'
 import Team from './Team'
 import Videos from './Videos'
@@ -59,6 +61,7 @@ export default {
   name: 'parallax',
   components: {
     VideoBG,
+    MainMenu,
     Sponsors,
     Team,
     Videos,
@@ -135,6 +138,9 @@ export default {
     z-index: 2;
   }
 
+  .blur {
+    filter: blur(5px);
+  }
 
   /* demo styles
   --------------------------------------------- */
@@ -160,15 +166,15 @@ export default {
     z-index: 5; /* slide over group 2 */
   }
   #group1 .parallax__layer--base {
-    background: rgb(102,204,102);
+    background: rgb(255, 255, 255);
   }
 
   #group2 {
     z-index: 3; /* slide under groups 1 and 3 */
   }
   #group2 .parallax__layer--back {
-    background: rgb(123,210,102);
-    background-image: url(../assets/parallax/bomb.jpg);
+    background: rgb(255, 255, 255);
+    background-image: url(../assets/parallax/bomb_blur.png);
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -177,7 +183,7 @@ export default {
     z-index: 4; /* slide over group 2 and 4 */
   }
   #group3 .parallax__layer--base {
-    background: rgb(153,216,101);
+    background: rgb(255, 255, 255);
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -186,8 +192,8 @@ export default {
     z-index: 2; /* slide under group 3 and 5 */
   }
   #group4 .parallax__layer--back {
-    background: rgb(184,223,101);
-    background-image: url(../assets/parallax/station.jpg);
+    background: rgb(255, 255, 255);
+    background-image: url(../assets/parallax/station_blur.png);
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -196,7 +202,7 @@ export default {
     z-index: 3; /* slide over group 4 and 6 */
   }
   #group5 .parallax__layer--base {
-    background: rgb(214,229,100);
+    background: rgb(255, 255, 255);
   }
 
   #group6 {
@@ -204,7 +210,7 @@ export default {
   }
   #group6 .parallax__layer--back {
     background: rgb(245,235,100);
-    background-image: url(../assets/parallax/shop.jpg);
+    background-image: url(../assets/parallax/shop_blur.png);
     background-repeat: no-repeat;
     background-size: cover;
   }
