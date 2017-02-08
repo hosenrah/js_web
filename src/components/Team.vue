@@ -9,7 +9,7 @@
           <img class="u-max-full-width" src="../assets/portraits/benni.jpg">
         </div>
         <div class="member">
-          <img class="u-max-full-width" src="../assets/portraits/andy.jpg">
+          <img class="u-max-full-width" src="../assets/portraits/andy.jpg"> 
         </div>
     </div>
   </div>
