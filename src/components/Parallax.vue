@@ -170,6 +170,7 @@ export default {
 
   #group1 {
     z-index: 5; /* slide over group 2 */
+    height: calc(100vw / 16 * 9);
   }
   #group1 .parallax__layer--base {
     background: rgb(255, 255, 255);
