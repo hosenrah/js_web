@@ -7,28 +7,36 @@
     </div>
     <div id="group2" class="parallax__group">
       <div class="parallax__layer parallax__layer--base">
-        <sponsors></sponsors>
+        <div class="content">
+          <sponsors></sponsors>
+        </div>
       </div>
       <div class="parallax__layer parallax__layer--back">
       </div>
     </div>
     <div id="group3" class="parallax__group">
       <div class="parallax__layer parallax__layer--fore">
-        <team></team>
+        <div class="content">
+          <team></team>
+        </div>
       </div>
       <div class="parallax__layer parallax__layer--base">
       </div>
     </div>
     <div id="group4" class="parallax__group">
       <div class="parallax__layer parallax__layer--base">
-        <instagram></instagram>
+        <div class="content">
+          <instagram></instagram>
+        </div>
       </div>
       <div class="parallax__layer parallax__layer--back">
       </div>
     </div>
     <div id="group5" class="parallax__group">
       <div class="parallax__layer parallax__layer--fore">
-        <videos></videos>
+        <div class="content">
+          <videos></videos>
+        </div>
       </div>
       <div class="parallax__layer parallax__layer--base">
       </div>
@@ -37,13 +45,16 @@
       <div class="parallax__layer parallax__layer--back">
       </div>
       <div class="parallax__layer parallax__layer--base">
-        <tutorials></tutorials>
+        <div class="content">
+          <tutorials></tutorials>
+        </div>
       </div>
     </div>
     <div id="group7" class="parallax__group">
       <div class="parallax__layer parallax__layer--base">
         <div class="social-container">
           <instagramIcon></instagramIcon>
+          <img src="https://travis-ci.org/hosenrah/js_web.svg?branch=master" alt="">
         </div>
       </div>
     </div>
@@ -230,6 +241,12 @@ export default {
     background-image: url(../assets/parallax/mountains.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+  }
+
+  .content {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
   }
 
   .social-container {

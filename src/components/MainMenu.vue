@@ -17,6 +17,9 @@
       <div class="item">
         <a href="#group6">Tutorials</a>
       </div>
+      <div class="item">
+        <iframe class="fb" src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fjstshrd%2F&width=50&layout=button_count&action=like&show_faces=true&share=true&height=46&appId" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+      </div>
     </div>
   </div>
 </template>
@@ -69,6 +72,12 @@ export default {
       &:hover {
         border-bottom: 2px solid black;
       }
+    }
+    & .fb {
+      border: none;
+      overflow: hidden;
+      width: 11em;
+      height: 2em;
     }
   }
 </style>
