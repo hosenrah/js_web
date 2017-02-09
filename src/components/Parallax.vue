@@ -54,7 +54,6 @@
       <div class="parallax__layer parallax__layer--base">
         <div class="social-container">
           <instagramIcon></instagramIcon>
-          <img src="https://travis-ci.org/hosenrah/js_web.svg?branch=master" alt="">
         </div>
       </div>
     </div>
