@@ -2,7 +2,7 @@
   <div class="videos">
     <h1 class="border" style="">VIDEOS</h1>
     <ul class="videos-container">
-      <li class="video" v-for="video in vimeoVideos" v-if="video.name.includes('#')">
+      <li class="video" v-for="video in vimeoVideos">
         <iframe v-bind:src="'https://player.vimeo.com/video/' + video.uri.slice(8) + '?badge=1&autopause=1&player_id=0'" width="1600" height="900" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
       </li>
     </ul>
@@ -22,9 +22,16 @@ export default {
       'https://api.vimeo.com/me/videos',
       {headers: {'Authorization': 'bearer 1bb5838a1c16bdab1e8eac3add1b6f2a'}})
     .then(response => {
-      this.vimeoVideos = response.body.data
+      response.body.data.filter(this.filterVideos)
     }, response => {
     })
+  },
+  methods: {
+    filterVideos: function (video) {
+      if (this.vimeoVideos.length <= 5 && video.name.includes('#')) {
+        this.vimeoVideos.push(video)
+      }
+    }
   }
 }
 </script>
