@@ -23,7 +23,7 @@ export default {
   },
   methods: {
     filterVideos: function (video) {
-      if (this.vimeoVideos.length <= 5 && video.name.includes('##')) {
+      if (this.vimeoVideos.length < 1 && video.name.includes('##')) {
         this.vimeoVideos.push(video)
       }
     }
