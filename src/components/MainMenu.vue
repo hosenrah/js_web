@@ -1,7 +1,9 @@
 <template>
   <div class="menu-container">
-    <a class="js-logo" href="#group1"></a>
     <div class="menu-items">
+      <div class="item">
+        <a class="js-logo" href="#group1"></a>
+      </div>
       <div class="item">
         <a href="#group2">Sponsors</a>
       </div>
@@ -37,6 +39,24 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+
+  @media only screen
+    and (min-device-width: 375px)
+    and (max-device-width: 667px)
+    and (-webkit-min-device-pixel-ratio: 2) {
+      .js-logo {
+        display: none;
+      }
+      .menu-container {
+        font-size: 2rem;
+      }
+      .menu-items {
+        justify-content: space-around;
+      }
+      .fb {
+        display: none;
+      }
+  }
   .menu-container {
     position: absolute;
     content: "";
@@ -48,6 +68,7 @@ export default {
   .js-logo {
     position: absolute;
     left: 1em;
+    top: 0;
     width: 7em;
     height: 100%;
     background-image: url(../assets/js_logo/js_logo_white_nav.png);
@@ -57,10 +78,9 @@ export default {
     filter: invert(1);
   }
   .menu-items {
-    margin-left: 6em;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: flex-end;
   }
   .item {

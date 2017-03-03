@@ -4,32 +4,32 @@
     <div class="sponsors-container">
         <div class="sponsor">
             <a href="http://madridskateboards.com/" target="_blank">
-                <img class="u-max-full-width" src="../assets/sponsors/Madrid.png">
+                <img class="img" src="../assets/sponsors/Madrid.png">
             </a>
         </div>
         <div class="sponsor">
             <a href="http://www.talk-about.org/leben-ist-mehr/" target="_blank">
-                <img class="u-max-full-width" src="../assets/sponsors/Ichthys.png">
+                <img class="img" src="../assets/sponsors/Ichthys.png">
             </a>
         </div>
         <div class="sponsor">
             <a href="http://nitrousa.com/de" target="_blank">
-                <img class="u-max-full-width" src="../assets/sponsors/Nitro.png">
+                <img class="img" src="../assets/sponsors/Nitro.png">
             </a>
         </div>
         <div class="sponsor">
             <a href="http://arborcollective.com/" target="_blank">
-                <img class="u-max-full-width" src="../assets/sponsors/Arbor.png">
+                <img class="img" src="../assets/sponsors/Arbor.png">
             </a>
         </div>
         <div class="sponsor">
             <a href="http://www.sport-mueller.de/" target="_blank">
-                <img class="u-max-full-width" src="../assets/sponsors/SportMueller.png">
+                <img class="img" src="../assets/sponsors/SportMueller.png">
             </a>
         </div>
         <div class="sponsor">
             <a href="http://www.lecannabis.com/de/" target="_blank">
-                <img class="u-max-full-width" src="../assets/sponsors/LeCannabis.png">
+                <img class="img" src="../assets/sponsors/LeCannabis.png">
             </a>
         </div>
     </div>
@@ -57,7 +57,7 @@ export default {
     align-content: center;
   }
   .sponsor {
-    & img {
+    & .img {
       width: 300px;
       box-sizing: border-box;
       &:hover {
