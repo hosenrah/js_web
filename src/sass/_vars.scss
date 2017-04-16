@@ -5,9 +5,41 @@ $susy: (
   container: 1600px,
   gutters: 1/4,
   global-box-sizing: border-box,
-  debug: (image: show)
+  //debug: (image: show)
 );
 
 body {
   font-family: "roboto_condensedregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0;
+}
+
+$h1: 36px;
+$h2: 30px;
+$h3: 24px;
+$h4: 20px;
+
+$font-weight: 300;
+
+h1 {
+  font-size: $h1;
+  color: #4A4A4A;
+  font-weight: $font-weight;
+}
+
+h2 {
+  font-size: $h2;
+  color: #4A4A4A;
+  font-weight: $font-weight;
+}
+
+h3 {
+  font-size: $h3;
+  color: #4A4A4A;
+  font-weight: $font-weight;
+}
+
+h4 {
+  font-size: $h4;
+  color: #4A4A4A;
+  font-weight: $font-weight;
 }

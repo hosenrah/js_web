@@ -23,7 +23,6 @@ export default {
     @include span(12 last);
 
     background: black;
-    margin-bottom: gutter(12);
   }
 
   .social {
