@@ -1,11 +1,12 @@
 <template lang="html">
   <div class="video-banner">
-    <iframe class="video-banner-video"frameborder="0" src="https://player.vimeo.com/video/204577677?background=1"></iframe>
+    <iframe v-if="bgVideo" class="video-banner-video" frameborder="0" v-bind:src="'https://player.vimeo.com/video/' + bgVideo.uri.slice(8) + '?background=1'"></iframe>
   </div>
 </template>
 
 <script>
 export default {
+  props: ['bgVideo']
 }
 </script>
 

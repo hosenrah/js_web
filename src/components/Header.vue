@@ -39,6 +39,7 @@ export default {
     @include span(5);
     padding: gutter(12);
     @media (min-width: 649px) {
+      position: relative;
       @include span(1);
       margin-left: span(1);
     }
