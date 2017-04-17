@@ -2,11 +2,17 @@
   <div class="header" :class="{toggleNav : toggleNav}">
     <img class="header--logo" src="../assets/js_logo/js_logo_black_nav.png" alt="">
     <div class="header--burger" @click="toggleNav = !toggleNav"></div>
+    <jsNavigation></jsNavigation>
   </div>
 </template>
 
 <script>
+import jsNavigation from '../components/Navigation'
+
 export default {
+  components: {
+    jsNavigation
+  },
   data () {
     return {
       toggleNav: false
@@ -23,15 +29,6 @@ export default {
     width: 100%;
     background: white;
     display: inline-block;
-  }
-  .toggleNav {
-    & + .wrap > .navigation {
-      display: block;
-    }
-    & > .header--burger {
-      content: url("../assets/content/burger--light.png");
-      background: grey;
-    }
   }
   .header--logo {
     position: absolute;

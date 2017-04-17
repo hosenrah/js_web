@@ -2,12 +2,8 @@
   <div>
     <jsHeader></jsHeader>
     <div class="wrap">
-      <titleVideo :bgVideo="bgVideo"></titleVideo>
-      <h4 class="wrap--description"><span class="wrap--description-emphasize">Just Shred – </span class="wrap--description-emphasize"> From the highest mountains to the most sketchy roads. We are a german snowboard and longboard crew and we love to shred the mountains and shoot videos.</h4>
-      <jsContent></jsContent>
-      <div class="wrap--instagram">
-        <h4 class="wrap--instagram-title">Follow us on Instagram</h4>
-        <jsDynamicContent :content="instaPosts.slice(0, 3)"></jsDynamicContent>
+      <div class="wrap--vimeo">
+        <jsDynamicContent :content="instaPosts.slice(0, 12)"></jsDynamicContent>
       </div>
     </div>
     <jsFooter></jsFooter>
@@ -22,7 +18,7 @@
   import jsFooter from '../components/Footer'
 
   export default {
-    name: 'home',
+    name: 'videos',
     components: {
       jsHeader,
       titleVideo,
@@ -41,7 +37,9 @@
         'https://api.vimeo.com/me/videos',
         {headers: {'Authorization': 'bearer 1bb5838a1c16bdab1e8eac3add1b6f2a'}})
       .then(response => {
-        this.vimeoVideos = response.body.data
+        // this.vimeoVideos = response.body.data
+        let vimeoVideos = response.body.data
+        this.vimeoVideos = vimeoVideos.map(this.mapVimeoProperties)
       }, response => {
       })
       this.$http.jsonp(
@@ -71,6 +69,15 @@
           description: post.caption.text,
           date: new Date(parseInt(post.created_time) * 1000),
           likes: post.likes.count
+        }
+        return newPost
+      },
+      mapVimeoProperties: function (post) {
+        let newPost = {
+          img: post.pictures.sizes[5].link_with_play_button,
+          link: post.uri,
+          name: post.name,
+          date: new Date(parseInt(post.created_time) * 1000)
         }
         return newPost
       }
@@ -103,6 +110,13 @@
   }
 
   .wrap--instagram {
+    display: none;
+    @media (min-width: 1024px) {
+      display: block;
+    }
+  }
+
+  .wrap--vimeo {
     display: none;
     @media (min-width: 1024px) {
       display: block;

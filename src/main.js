@@ -6,11 +6,19 @@ import VueResource from 'vue-resource';
 Vue.use(VueResource)
 
 import Home from './routes/Home';
-import Foo from './routes/Videos';
+import Team from './routes/Team';
+import Videos from './routes/Videos';
+import Photos from './routes/Photos';
+import Sponsors from './routes/Sponsors';
+import Tutorials from './routes/Tutorials';
 
 const routes = [
   { path: '/', component: Home },
-  { path: '/foo', component: Foo },
+  { path: '/team', component: Team },
+  { path: '/videos', component: Videos },
+  { path: '/photos', component: Photos },
+  { path: '/sponsors', component: Sponsors },
+  { path: '/tutorials', component: Tutorials },
   { path: '*', redirect: '/' },
 ];
 

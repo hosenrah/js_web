@@ -24,6 +24,8 @@ $h2: 30px;
 $h3: 24px;
 $h4: 20px;
 
+$mobile-nav-background: #DDDDDD;
+
 $font-weight: 300;
 
 h1 {
@@ -48,4 +50,8 @@ h4 {
   font-size: $h4;
   color: #4A4A4A;
   font-weight: $font-weight;
+}
+
+a {
+  text-decoration: none;
 }
