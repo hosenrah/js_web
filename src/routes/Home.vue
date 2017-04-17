@@ -16,12 +16,12 @@
 </template>
 
 <script>
-  import jsHeader from './Header'
-  import jsNavigation from './Navigation'
-  import titleVideo from './TitleVideo'
-  import jsContent from './Content'
-  import jsDynamicContent from './DynamicContent'
-  import jsFooter from './Footer'
+  import jsHeader from '../components/Header'
+  import jsNavigation from '../components/Navigation'
+  import titleVideo from '../components/TitleVideo'
+  import jsContent from '../components/Content'
+  import jsDynamicContent from '../components/DynamicContent'
+  import jsFooter from '../components/Footer'
 
   export default {
     name: 'jsWeb',

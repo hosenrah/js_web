@@ -7,6 +7,6 @@
 
 <script>
 export default {
-  name: 'foo'
+  name: 'videos'
 }
 </script>
