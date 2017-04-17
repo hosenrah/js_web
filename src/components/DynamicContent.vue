@@ -3,7 +3,7 @@
     <div class="items--item" v-for="item in content">
       <a href="">
         <img :src="item.img" :alt="item.title">
-        <h2 class="overlay-title"></h2>
+        <h2 class="overlay-title">{{item.description.slice(0, 15) + '...'}}</h2>
       </a>
     </div>
   </div>

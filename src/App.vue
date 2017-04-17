@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <router-link to="/foo">Go back</router-link>
     <jsWeb></jsWeb>
   </div>
 </template>
