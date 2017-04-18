@@ -1,5 +1,6 @@
 <template lang="html">
   <div class="video-banner">
+    <img class="video-banner-background" src="../assets/js_logo/js_logo_white.png" alt="">
     <iframe v-if="bgVideo" class="video-banner-video" frameborder="0" v-bind:src="'https://player.vimeo.com/video/' + bgVideo.uri.slice(8) + '?background=1'"></iframe>
   </div>
 </template>
@@ -13,25 +14,27 @@ export default {
 <style lang="scss">
   @import "../sass/vars";
 
+
   .video-banner {
-    display: none;
-    width: 95vw;
-    height: 95vw / 16 * 9;
-    @media (min-width: 1024px) {
-      width: 1024px;
-      height: 1024px / 16 * 9;
-      display: block;
-    }
+    width: 70em;
     position: relative;
     margin: 0 auto;
+    height: 70em / 16 * 9;
     overflow: hidden;
     margin-bottom: gutter(12);
+    @media (max-width: 648px) {
+      display: none;
+    }
   }
   .video-banner-video {
     position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
+    top: -5%;
+    left:-5%;
+    width:110%;
+    height:110%;
+  }
+  .video-banner-background {
+    width: 80%;
+    margin: 0 auto;
   }
 </style>
