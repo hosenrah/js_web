@@ -2,9 +2,7 @@
   <div>
     <jsHeader></jsHeader>
     <div class="wrap">
-      <div class="wrap--vimeo">
-        <jsDynamicContent :content="videos.slice(0, 3)"></jsDynamicContent>
-      </div>
+      <jsVimeoContainer :content="videos.slice(0, 9)"></jsVimeoContainer>
     </div>
     <jsFooter></jsFooter>
   </div>
@@ -14,7 +12,7 @@
   import jsHeader from '../components/Header'
   import titleVideo from '../components/TitleVideo'
   import jsContent from '../components/Content'
-  import jsDynamicContent from '../components/DynamicContent'
+  import jsVimeoContainer from '../components/VimeoContainer'
   import jsFooter from '../components/Footer'
 
   export default {
@@ -23,7 +21,7 @@
       jsHeader,
       titleVideo,
       jsContent,
-      jsDynamicContent,
+      jsVimeoContainer,
       jsFooter
     },
     data () {
@@ -89,37 +87,8 @@
   @import "../sass/vars";
 
   .wrap {
-    @include container;
-  }
-
-  .wrap--description {
-    @include span(11 of 13);
-    @include pre(1 of 13);
     @media (min-width: 1024px) {
-      @include span(7 of 13);
-      @include pre(3 of 13);
-    }
-  }
-
-  .wrap--description-emphasize {
-    font-size: 30px;
-    display: none;
-    @media (min-width: 1024px) {
-      display: inline-block;
-    }
-  }
-
-  .wrap--instagram {
-    display: none;
-    @media (min-width: 1024px) {
-      display: block;
-    }
-  }
-
-  .wrap--vimeo {
-    display: none;
-    @media (min-width: 1024px) {
-      display: block;
+      @include container;
     }
   }
 

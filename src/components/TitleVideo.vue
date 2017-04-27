@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="video-banner">
-    <img class="video-banner-background" src="../assets/js_logo/js_logo_white.png" alt="">
+    <img class="video-banner-thumbnail" src="../assets/js_logo/js_logo_white.png" alt="">
     <iframe v-if="bgVideo" class="video-banner-video" frameborder="0" v-bind:src="'https://player.vimeo.com/video/' + bgVideo.uri.slice(8) + '?background=1'"></iframe>
   </div>
 </template>
@@ -33,8 +33,11 @@ export default {
     width:110%;
     height:110%;
   }
-  .video-banner-background {
-    width: 80%;
+  .video-banner-thumbnail {
+    width: 60%;
+    position: absolute;
+    left: 0;
+    right: 0;
     margin: 0 auto;
   }
 </style>

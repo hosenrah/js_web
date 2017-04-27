@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="items">
+  <div v-if="content" class="items">
     <div class="items--item" v-for="item in content">
       <a href="">
         <img :src="item.img" :alt="item.title">
