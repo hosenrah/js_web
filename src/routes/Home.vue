@@ -9,34 +9,28 @@
       <section>
         <div class="items">
           <div class="items--item">
-            <a href="">
+            <router-link to="/team" @click.native="$scrollToTop; toggleNav = false;">
               <img src="../assets/content/Just_Shred_Team.png" alt="team">
               <h2 class="overlay-title">Team</h2>
-            </a>
+            </router-link>
           </div>
           <div class="items--item">
-            <a href="">
-              <img src="../assets/content/Just_Shred_Sponsors.png" alt="sponsors">
-              <h2 class="overlay-title">Sponsors</h2>
-            </a>
-          </div>
-          <div class="items--item">
-            <a href="">
+            <router-link to="/videos" @click.native="$scrollToTop; toggleNav = false;">
               <img src="../assets/content/Just_Shred_Videos.png" alt="videos">
               <h2 class="overlay-title">Videos</h2>
-            </a>
+            </router-link>
           </div>
           <div class="items--item">
-            <a href="">
+            <router-link to="/photos" @click.native="$scrollToTop; toggleNav = false;">
               <img src="../assets/content/Just_Shred_Photos.png" alt="photos">
               <h2 class="overlay-title">Photos</h2>
-            </a>
+            </router-link>
           </div>
           <div class="items--item">
-            <a href="">
+            <router-link to="/tutorials" @click.native="$scrollToTop; toggleNav = false;">
               <img src="../assets/content/Just_Shred_Tutorials.png" alt="tutorials">
               <h2 class="overlay-title">Tutorials</h2>
-            </a>
+            </router-link>
           </div>
         </div>
       </section>
@@ -111,11 +105,6 @@
     /* Styles for desktop view go here */
     @media (min-width: 1024px) {
       width: span(4);
-    }
-    & a {
-      width: span(12);
-      height: span(12);
-      position: relative;
     }
     & img {
       width: span(12);
