@@ -1,116 +1,144 @@
 <template lang="html">
   <div>
-    <jsHeader></jsHeader>
     <div class="wrap">
-      <titleVideo :bgVideo="bgVideo"></titleVideo>
+      <div class="video-banner">
+        <img class="video-banner-thumbnail" src="../assets/js_logo/js_logo_white.png" alt="">
+        <iframe v-if="bgVideo" class="video-banner-video" frameborder="0" v-bind:src="'https://player.vimeo.com/video/' + bgVideo.link.slice(8) + '?background=1'"></iframe>
+      </div>
       <h4 class="wrap--description"><span class="wrap--description-emphasize">Just Shred – </span class="wrap--description-emphasize"> From the highest mountains to the most sketchy roads. We are a german snowboard and longboard crew and we love to shred the mountains and shoot videos.</h4>
-      <jsContent></jsContent>
+      <section>
+        <div class="items">
+          <div class="items--item">
+            <a href="">
+              <img src="../assets/content/Just_Shred_Team.png" alt="team">
+              <h2 class="overlay-title">Team</h2>
+            </a>
+          </div>
+          <div class="items--item">
+            <a href="">
+              <img src="../assets/content/Just_Shred_Sponsors.png" alt="sponsors">
+              <h2 class="overlay-title">Sponsors</h2>
+            </a>
+          </div>
+          <div class="items--item">
+            <a href="">
+              <img src="../assets/content/Just_Shred_Videos.png" alt="videos">
+              <h2 class="overlay-title">Videos</h2>
+            </a>
+          </div>
+          <div class="items--item">
+            <a href="">
+              <img src="../assets/content/Just_Shred_Photos.png" alt="photos">
+              <h2 class="overlay-title">Photos</h2>
+            </a>
+          </div>
+          <div class="items--item">
+            <a href="">
+              <img src="../assets/content/Just_Shred_Tutorials.png" alt="tutorials">
+              <h2 class="overlay-title">Tutorials</h2>
+            </a>
+          </div>
+        </div>
+      </section>
       <div class="wrap--instagram">
         <h4 class="wrap--instagram-title">Follow us on Instagram</h4>
-        <jsDynamicContent :content="instaPosts.slice(0, 3)"></jsDynamicContent>
+        <jsInstagramContainer :content="instaPosts.slice(0, 3)"></jsInstagramContainer>
       </div>
     </div>
-    <jsFooter></jsFooter>
   </div>
 </template>
 
 <script>
-  import jsHeader from '../components/Header'
-  import titleVideo from '../components/TitleVideo'
-  import jsContent from '../components/Content'
-  import jsDynamicContent from '../components/DynamicContent'
-  import jsFooter from '../components/Footer'
+  import jsInstagramContainer from '../components/InstagramContainer'
 
   export default {
     name: 'home',
     components: {
-      jsHeader,
-      titleVideo,
-      jsContent,
-      jsDynamicContent,
-      jsFooter
+      jsInstagramContainer
     },
-    data () {
-      return {
-        vimeoVideos: [],
-        instaPosts: []
-      }
-    },
-    mounted: function () {
-      this.$http.get(
-        'https://api.vimeo.com/me/videos',
-        {headers: {'Authorization': 'bearer 1bb5838a1c16bdab1e8eac3add1b6f2a'}})
-      .then(response => {
-        this.vimeoVideos = response.body.data
-      }, response => {
-      })
-      this.$http.jsonp(
-        'https://api.instagram.com/v1/users/self/media/recent/?access_token=2235700352.4ee6f6e.b902f5c21acc4655a71b7043b21cdcfc')
-      .then(response => {
-        let instaPosts = JSON.parse(JSON.stringify(response.data.data))
-        this.instaPosts = instaPosts.map(this.mapInstagramProperties)
-      }, response => {
-      })
-    },
-    computed: {
-      bgVideo: function (video) {
-        return this.vimeoVideos.find(video => video.name.includes('##'))
-      },
-      videos: function (video) {
-        return this.vimeoVideos.filter(video => video.name.includes('#'))
-      },
-      tutorials: function (video) {
-        return this.vimeoVideos.filter(video => video.name.includes('$'))
-      }
-    },
-    methods: {
-      mapInstagramProperties: function (post) {
-        let newPost = {
-          img: post.images.thumbnail.url.replace('s150x150', 's320x320'),
-          link: post.link,
-          description: post.caption.text,
-          date: new Date(parseInt(post.created_time) * 1000),
-          likes: post.likes.count
-        }
-        return newPost
-      }
-    }
+    props: ['bgVideo', 'instaPosts']
   }
 </script>
 
 <style lang="scss">
   @import "../sass/vars";
 
-  .wrap {
-    @include container;
-  }
-
-  .wrap--description {
-    @include span(11 of 13);
-    @include pre(1 of 13);
-    @media (min-width: 1024px) {
-      @include span(7 of 13);
-      @include pre(3 of 13);
+  .video-banner {
+    width: 70em;
+    position: relative;
+    margin: 0 auto;
+    height: 70em / 16 * 9;
+    overflow: hidden;
+    margin-bottom: gutter(12);
+    @media (max-width: 648px) {
+      display: none;
     }
   }
-
-  .wrap--description-emphasize {
-    font-size: 30px;
-    display: none;
-    @media (min-width: 1024px) {
-      display: inline-block;
-    }
+  .video-banner-video {
+    position:absolute;
+    top: -5%;
+    left:-5%;
+    width:110%;
+    height:110%;
+  }
+  .video-banner-thumbnail {
+    width: 60%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
   }
 
-  .wrap--instagram {
-    display: none;
-    @media (min-width: 1024px) {
-      display: block;
+  .items {
+    /* Styles for mobile view go here */
+    @media (min-width: 649px) {
+      width: span(6);
+      @include pre(3);
     }
+    /* Styles for desktop view go here */
+    width: span(12);
+
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
   }
 
-  .wrap--instagram-title {
+  .items--item {
+    /* Styles for mobile view go here */
+    @media (min-width: 649px) {
+      width: span(6);
+    }
+    /* Styles for desktop view go here */
+    @media (min-width: 1024px) {
+      width: span(4);
+    }
+    & a {
+      width: span(12);
+      height: span(12);
+      position: relative;
+    }
+    & img {
+      width: span(12);
+      height: span(12);
+      object-fit: cover;
+    }
+    margin-bottom: gutter(12);
+  }
+  .overlay-title {
+    /* Styles for desktop view go here */
+    @media (min-width: 1024px) {
+      font-size: $h3;
+    }
+    position: absolute;
+    bottom: 13px;
+    background: black;
     text-align: center;
+    color: white;
+    margin: 0 3%;
+    z-index: 5;
+    padding: 0 5px;
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
   }
 
 </style>

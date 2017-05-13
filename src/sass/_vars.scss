@@ -1,4 +1,4 @@
-@import "~susy/sass/susy";
+@import '~susy/sass/susy';
 
 $susy: (
   columns: 12,
@@ -8,15 +8,19 @@ $susy: (
   //debug: (image: show)
 );
 
-@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
-  html {
-    display: none;
-  }
+@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape)
+{
+    html
+    {
+        display: none;
+    }
 }
 
-body {
-  font-family: "roboto_condensedregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  margin: 0;
+body
+{
+    font-family: 'roboto_condensedregular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+    margin: 0;
 }
 
 $h1: 36px;
@@ -24,34 +28,51 @@ $h2: 30px;
 $h3: 24px;
 $h4: 20px;
 
-$mobile-nav-background: #DDDDDD;
+$mobile-nav-background: #ddd;
 
 $font-weight: 300;
 
-h1 {
-  font-size: $h1;
-  color: #4A4A4A;
-  font-weight: $font-weight;
+h1
+{
+    font-size: $h1;
+    font-weight: $font-weight;
+
+    width: 10em;
+    margin: 1em auto;
+
+    text-align: center;
+
+    color: #4a4a4a;
+    border: 2px solid black;
 }
 
-h2 {
-  font-size: $h2;
-  color: #4A4A4A;
-  font-weight: $font-weight;
+h2
+{
+    font-size: $h2;
+    font-weight: $font-weight;
+
+    text-align: center;
+
+    color: #4a4a4a;
 }
 
-h3 {
-  font-size: $h3;
-  color: #4A4A4A;
-  font-weight: $font-weight;
+h3
+{
+    font-size: $h3;
+    font-weight: $font-weight;
+
+    color: #4a4a4a;
 }
 
-h4 {
-  font-size: $h4;
-  color: #4A4A4A;
-  font-weight: $font-weight;
+h4
+{
+    font-size: $h4;
+    font-weight: $font-weight;
+
+    color: #4a4a4a;
 }
 
-a {
-  text-decoration: none;
+a
+{
+    text-decoration: none;
 }

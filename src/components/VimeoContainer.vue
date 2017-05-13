@@ -29,6 +29,8 @@ export default {
     -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-top: 0;
+    margin-bottom: 1em;
   }
   .vimeo-container--post {
     @media (min-width: 1024px) {

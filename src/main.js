@@ -1,37 +1,19 @@
 /* eslint-disable */
 import Vue from 'vue';
+import App from './App'
 import VueRouter from 'vue-router';
 import VueResource from 'vue-resource';
+import router from './routes'
 
 Vue.use(VueResource)
 
-import Home from './routes/Home';
-import Team from './routes/Team';
-import Videos from './routes/Videos';
-import Photos from './routes/Photos';
-import Sponsors from './routes/Sponsors';
-import Tutorials from './routes/Tutorials';
+Vue.config.productionTip = false
 
-const routes = [
-  { path: '/', component: Home },
-  { path: '/team', component: Team },
-  { path: '/videos', component: Videos },
-  { path: '/photos', component: Photos },
-  { path: '/sponsors', component: Sponsors },
-  { path: '/tutorials', component: Tutorials },
-  { path: '*', redirect: '/' },
-];
-
-Vue.use(VueRouter); // This makes all the magic hapen and Vue recognizes the router-view and router-link
-
-const router = new VueRouter({
-  routes,
-  hashbang: false,
-  history: true,
-  linkActiveClass: 'active-class',
-});
+Vue.prototype.$scrollToTop = () => window.scrollTo(0,0)
 
 new Vue({
   el: '#app',
   router,
-});
+  template: '<App/>',
+  components: { App }
+})
