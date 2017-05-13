@@ -133,7 +133,7 @@
       display: none;
       position: absolute;
       height: 88vh;
-      top: 4.2vh;
+      top: 12vh;
       background: $mobile-nav-background;
       z-index: 1000;
       @include span(12);
