@@ -67,6 +67,10 @@
     @media (max-width: 648px) {
       display: none;
     }
+    @media (max-width: 1023px) {
+      width: 30em;
+      height: 30em / 16 * 9;
+    }
   }
   .video-banner-video {
     position:absolute;

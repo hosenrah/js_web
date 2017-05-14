@@ -104,16 +104,34 @@
     width: 100%;
     background: white;
     display: inline-block;
+    max-width: 1200px;
+    margin: 0 auto;
+    @media (min-width: 649px) {
+      display: block;
+    }
+    
+
+    @media (min-width: 1024px) {
+      max-width: 70em;
+    }
+    height: 7vh;
   }
   .header--logo {
-    position: absolute;
-    bottom: 0;
-    @include span(5);
-    padding: gutter(12);
-    @media (min-width: 649px) {
-      position: relative;
-      @include span(1);
-      margin-left: span(1);
+    vertical-align: top;
+    width: 100px;
+    height: 50px;
+    margin-right: 20px;
+    margin-top: 15px;
+    margin-left: 15px;
+    display: inline-block;
+    object-fit: contain;
+    float: left;
+    @media (max-width: 649px) {
+      width: 100px;
+    }
+
+    @media (min-width: 1024px) {
+      max-width: 70em;
     }
   }
   .header--burger {
@@ -128,7 +146,7 @@
   }
 
   /* Styles for mobile view go here */
-  @media (max-width: 1023px) {
+  @media (max-width: 649px) {
     .navigation {
       display: none;
       position: absolute;
@@ -157,7 +175,7 @@
     }
   }
   /* Styles for desktop view go here */
-  @media (min-width: 1024px) {
+  @media (min-width: 649px) {
     .navigation {
       @include span(6);
       @include pre(3);
