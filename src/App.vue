@@ -85,7 +85,7 @@
       },
       mapVimeoProperties: function (post) {
         let newPost = {
-          img: post.pictures.sizes[5].link_with_play_button,
+          // img: post.pictures.sizes[5].link_with_play_button,
           link: post.uri,
           name: post.name,
           date: new Date(parseInt(post.created_time) * 1000)
@@ -109,7 +109,7 @@
     @media (min-width: 649px) {
       display: block;
     }
-    
+
 
     @media (min-width: 1024px) {
       max-width: 70em;
