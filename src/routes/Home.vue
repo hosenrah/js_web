@@ -5,7 +5,8 @@
         <img class="video-banner-thumbnail" src="../assets/js_logo/js_logo_black.png" alt="">
         <iframe v-if="bgVideo" class="video-banner-video" frameborder="0" v-bind:src="'https://player.vimeo.com/video/' + bgVideo.link.slice(8) + '?background=1'"></iframe>
       </div>
-      <h4 class="wrap--description"><span class="wrap--description-emphasize">Just Shred – </span class="wrap--description-emphasize"> From the highest mountains to the most sketchy roads. We are a german snowboard and longboard crew and we love to shred the mountains and shoot videos.</h4>
+      <h4 class="wrap--description"><span class="wrap--description-emphasize">Just Shred – </span class="wrap--description-emphasize">Three doods shredding and having fun.
+Trust in God</h4>
       <section>
         <div class="items">
           <div class="items--item">
